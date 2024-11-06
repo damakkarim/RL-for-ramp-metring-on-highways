@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2024-11-04 21:47:09 by Eclipse SUMO netedit Version 1.21.0
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <!-- Define vehicle types -->
+    <vType id="passenger_car" length="5.0" minGap="2.5" maxSpeed="27.78" accel="2.6" decel="4.5" sigma="0.5" />
+    <vType id="truck" length="12.0" minGap="3.0" maxSpeed="22.22" accel="1.3" decel="4.0" sigma="0.5" />
+    
+    <!-- Define routes -->
+    <route id="highway_route" edges="E0 E0.60"/>
+    <route id="ramp_route" edges="E1 E0.60"/>
+    
+    <!-- Highway traffic - main flow -->
+    <flow id="highway_cars_lane0" type="passenger_car" begin="0.00" departLane="0" 
+          from="E0" to="E0.60" end="3600.00" vehsPerHour="600">
+        <param key="departSpeed" value="max"/>
+    </flow>
+    
+    <flow id="highway_cars_lane1" type="passenger_car" begin="0.00" departLane="1" 
+          from="E0" to="E0.60" end="3600.00" vehsPerHour="600">
+        <param key="departSpeed" value="max"/>
+    </flow>
+    
+    <flow id="highway_cars_lane2" type="passenger_car" begin="0.00" departLane="2" 
+          from="E0" to="E0.60" end="3600.00" vehsPerHour="600">
+        <param key="departSpeed" value="max"/>
+    </flow>
+    
+    <!-- Highway traffic - trucks -->
+    <flow id="highway_trucks" type="truck" begin="0.00" departLane="0" 
+          from="E0" to="E0.60" end="3600.00" vehsPerHour="200">
+        <param key="departSpeed" value="max"/>
+    </flow>
+    
+    <!-- Ramp traffic -->
+    <flow id="ramp_flow" type="passenger_car" begin="0.00" 
+          from="E1" to="E0.60" end="3600.00" vehsPerHour="600">
+        <param key="departSpeed" value="max"/>
+    </flow>
+</routes>
