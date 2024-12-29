@@ -10,7 +10,7 @@ if "SUMO_HOME" not in os.environ:
     sys.exit("Please declare the environment variable 'SUMO_HOME'")
 
 # Initialize the environment and agent
-env = SumoEnvironment(r'SUMO architechture/light1.sumocfg')
+env = SumoEnvironment(r'C:\Users\Siwar\Desktop\girl\RL-for-ramp-metring-on-highways\SUMO architecture/light1.sumocfg')
 agent = DQNAgent(state_size=env.state_size, action_size=env.action_size)
 average_wait_time=0
 # Function to run the simulation
