@@ -12,7 +12,7 @@ class SumoEnvironment:
         """
         self.sumo_cfg_file = sumo_cfg_file
 
-        # Définir les identifiants des voies selon votre fichier SUMO
+        # Définir les identifiants des voies
         self.highway_lanes = ["E0_0", "E0_1", "E0_2", "E0.60_0", "E0.60_1", "E0.60_2"]
         self.ramp_lane = "E1_0"  # Assurez-vous que cela correspond à la voie de la bretelle
 

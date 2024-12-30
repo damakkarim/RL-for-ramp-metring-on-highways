@@ -102,7 +102,7 @@ class DQNAgent:
 
             print(f"Episode {episode+1}/{episodes}, Total Reward: {total_reward}, Exploration Rate: {self.exploration_rate:.2f}")
 
-        # Plot the results after training
+        # ici ke veux voir les rewards
 
         self._plot_rewards(rewards)
 
